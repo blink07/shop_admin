@@ -53,14 +53,11 @@ class UserList(ListModelMixin, viewsets.GenericViewSet):
 
     def list(self, request, *args, **kwargs):
         queryset = self.filter_queryset(self.get_queryset())
-        print(queryset)
         page = self.paginate_queryset(queryset)
         if page is not None:
             serializer = self.get_serializer(page, many=True)
             return self.get_paginated_response(serializer.data)
         serializer = self.get_serializer(queryset, many=True)
-        # return Response(serializer.data)
-        print(serializer.data)
         return response_success(data=serializer.data)
 
 
@@ -213,26 +210,9 @@ class RolePermissionListView(APIView):
         :param pk1: 权限的ID
         :return:
         """
-        # print(request.Meta)
-        # 1.先删除最低级权限，即删除角色外键为pk，权限外键pk1的权限
-        # 2.删除权限外键id为pk1，角色外键为pk
-        # 3.获取删除后的角色权限
-        obj = PermissionRole.objects.get(role=pk, id=pk1)
-        if obj.level == 1: # 代表三级权限
-            # 删除一级权限需要先删除三级子权限和二级子权限
-            per_2_objs = PermissionRole.objects.filter(role=pk, children=pk1)
-            for per_2 in per_2_objs:
-                PermissionRole.objects.filter(role=pk, children=per_2.id).delete()
-            per_2_objs.delete()
-            obj.delete()
-        elif obj.level == 2:
-            # 删除二级权限需要先删除三级子权限
-            PermissionRole.objects.filter(role=pk, children=pk1)
-            obj.delete()
-        else:
-            # 三级权限直接删除
-            obj.delete()
-        # 删除数据后返回该角色的现有权限
+        # 1.删除权限外键id为pk1，角色外键为pk
+        # 2.获取删除后重新加载该角色的权限列表
+        PermissionRole.objects.get(role=pk, id=pk1).delete()
         role = Role.objects.get(id=pk)
         permissions_ = role.permissions.all()
         data = []
@@ -253,7 +233,7 @@ class RolePermissionListView(APIView):
                                 per_2_dict["children"].append(per_3_dict)
                         per_dict["children"].append(per_2_dict)
                 data.append(per_dict)
-        return response_success(data=data)
+        return response_success(data={})
 
 
 class PermissionDistribution(APIView):
