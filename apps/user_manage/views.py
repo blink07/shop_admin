@@ -211,7 +211,7 @@ class RolePermissionListView(APIView):
         :return:
         """
         # 1.删除权限外键id为pk1，角色外键为pk
-        # 2.获取删除后重新加载该角色的权限列表
+        # 2.获取删除后重新加载角色权限
         PermissionRole.objects.get(role=pk, id=pk1).delete()
         role = Role.objects.get(id=pk)
         permissions_ = role.permissions.all()
@@ -242,17 +242,13 @@ class PermissionDistribution(APIView):
     """
     def post(self, request,pk):
         """
-        因外键原因，需要先删除再添加
-        删除时先从低权限删除，增加时从高权限开始添加
         :param request:
         :param pk:
         :return:
         """
         permission_keys = request.data
         permission_keys_sort = sorted(permission_keys['keys'])
-        PermissionRole.objects.filter(role=pk, level=3).delete()
-        PermissionRole.objects.filter(role=pk, level=2).delete()
-        PermissionRole.objects.filter(role=pk, level=1).delete()
+        PermissionRole.objects.filter(role=pk).delete()
         role = Role.objects.get(id=pk)
         level_3 = []
         for key in permission_keys_sort:
