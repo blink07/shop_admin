@@ -16,7 +16,11 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/apps" isTestSource="false" />
     </content>
+<<<<<<< HEAD
     <orderEntry type="jdk" jdkName="Python 3.8" jdkType="Python SDK" />
+=======
+    <orderEntry type="jdk" jdkName="Python 3.8 (adminDemo)" jdkType="Python SDK" />
+>>>>>>> b6506fd53c9d3111cf278fdf70ed3c35a515a4da
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">

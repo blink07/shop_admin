@@ -45,6 +45,7 @@ class UserList(ListModelMixin, viewsets.GenericViewSet):
     获取用户列表
     """
     # permission_classes = [permissions.IsAuthenticated, TokenHasReadWriteScope]
+
     queryset = User.objects.all()
     serializer_class = UserSerializer
     pagination_class = StandardResultsSetPagination
@@ -112,6 +113,7 @@ class CustomResponseObtainJSONWebToken(ObtainJSONWebToken):
         if serializer.is_valid():
             user = serializer.object.get('user') or request.user
             token = serializer.object.get('token')
+            print(">>>>>>>>>>>>>:",token)
             response_data = jwt_response_payload_handler(token, user, request)
             response = Response(response_data)
             if api_settings.JWT_AUTH_COOKIE:
@@ -143,6 +145,7 @@ class UserRegisterView(CreateModelMixin, RetrieveModelMixin, UpdateModelMixin,De
             return UserSerializer
 
     def update(self, request,*args, **kwargs):
+        self.dispatch()
         data = request.data
         instance = self.get_object()
         instance.email = data["email"]
