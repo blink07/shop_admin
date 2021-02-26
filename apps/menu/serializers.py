@@ -29,6 +29,8 @@ class MenuSerializer(ModelSerializer):
     #     # validated_data.pop("sub_cat")
     #     # parent = Menu.objects.get(id=validated_data["parent"])
     #     return Menu(**validated_data)
+    
+
 class PermissionSerializer3(ModelSerializer):
 
     class Meta:
