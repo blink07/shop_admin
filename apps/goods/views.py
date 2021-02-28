@@ -19,20 +19,6 @@ class CategoryList(ListModelMixin, viewsets.GenericViewSet):
     filter_backends = (filters.SearchFilter,)
     search_fields = ('category_type', )
 
-    def list(self, request, *args, **kwargs):
-        queryset = self.filter_queryset(self.get_queryset())
-        print(queryset)
-        page = self.paginate_queryset(queryset)
-        print("page>>>>>>>>>>",page)
-        if page is not None:
-            serializer = self.get_serializer(page, many=True)
-            return self.get_paginated_response(serializer.data)
-
-        serializer = self.get_serializer(queryset, many=True)
-        # return Response(serializer.data)
-        print(serializer.data)
-        return response_success(data=serializer.data)
-
     def get_serializer_class(self):
         page = self.request.GET.get('pagenum', None)
         if page:

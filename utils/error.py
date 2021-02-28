@@ -3,6 +3,10 @@ from __future__ import unicode_literals
 from . import base
 
 
+class SUCCESS(base.OK200):
+    message = u"操作成功~~"
+
+
 class ERROR_FAULT(base.ServiceUnavailable503):
     message = u"服务器内部错误~~"
 

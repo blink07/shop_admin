@@ -118,5 +118,3 @@ class ValidationError512(BaseReturn):
 
 class UserOrPasswordError(BaseReturn):
     status_code=600
-
-

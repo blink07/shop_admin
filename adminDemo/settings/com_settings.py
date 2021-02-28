@@ -2,6 +2,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import sys
+from datetime import datetime as d
 
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -34,8 +35,8 @@ INSTALLED_APPS = [
     # 'oauth2_provider',  # 使用oauth2鉴权登录
     'corsheaders',
     'menu',
-    'rest_framework_swagger',
-    'goods'
+    'goods',
+    'drf_yasg'
 ]
 
 MIDDLEWARE = [
@@ -47,6 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'apps.middlewares.exception_middlewares.ExceptionMiddleware',
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
@@ -105,7 +107,7 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ),
     # 'DEFAULT_PAGINATION_CLASS': 'apps.common.pagination.StandardResultsSetPagination'
-    # 'EXCEPTION_HANDLER':'utils.exception_handlers.custom_exception_handler'  # restframework 统一异常处理器，但是捕捉不到404异常， 是否可以重写CommonMiddleware中间件统一返回Response类型有待完善
+    'EXCEPTION_HANDLER':'utils.exception_handlers.custom_exception_handler'  # restframework 统一异常处理器，但是捕捉不到404异常， 是否可以重写CommonMiddleware中间件统一返回Response类型有待完善
 }
 
 # 自定义验证类
@@ -160,3 +162,79 @@ USE_TZ = True
 REGEX_MOBILE = r'^1[358]\d{9}$|^147\d{8}$|^176\d{8}$'
 # 邮箱匹配规则
 REGEX_EMAIL = r'^[A-Za-z0-9.]+@[A-Za-z0-9.]+.com$'
+
+# Django日志
+BASE_LOG_DIR = os.path.join(BASE_DIR, "log")
+if not os.path.exists(BASE_LOG_DIR):
+    os.mkdir(BASE_LOG_DIR)
+LOGGING = {
+    'version': 1,  # 保留字
+    'disable_existing_loggers': False,  # 禁用已经存在的logger实例
+    # 日志文件的格式
+    'formatters': {
+        # 详细的日志格式
+        'standard': {
+            'format': '[%(asctime)s][%(threadName)s:%(thread)d][task_id:%(name)s][%(filename)s:%(lineno)d]'
+                      '[%(levelname)s][%(message)s]'
+        },
+        # 简单的日志格式
+        'simple': {
+            'format': '[%(levelname)s][%(asctime)s][%(filename)s:%(lineno)d]%(message)s'
+        },
+        # 定义一个特殊的日志格式
+        'collect': {
+            'format': '%(message)s'
+        }
+    },
+    # 过滤器
+    'filters': {
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
+    },
+    # 处理器
+    'handlers': {
+        # 在终端打印
+        'console': {
+            'level': 'DEBUG',
+            'filters': ['require_debug_true'],  # 只有在Django debug为True时才在屏幕打印日志
+            'class': 'logging.StreamHandler',  #
+            'formatter': 'simple'
+        },
+        # 默认的
+        # 'default': {
+        #     'level': 'INFO',
+        #     'class': 'logging.handlers.RotatingFileHandler',  # 保存到文件，自动切
+        #     'filename': os.path.join(BASE_LOG_DIR, "{}.log".format(datetime.now().date())),  # 日志文件
+        #     'maxBytes': 1024 * 1024 * 50,  # 日志大小 50M
+        #     'backupCount': -1,  # 最多备份几个
+        #     'formatter': 'simple',
+        #     'encoding': 'utf-8',
+        # },
+
+        'default': {
+            'level': 'INFO',
+            'class': 'logging.handlers.TimedRotatingFileHandler',  # 保存到文件，自动切
+            'filename': os.path.join(BASE_LOG_DIR, "admin.log"),  # 日志文件
+            'when': 'midnight',
+            'interval': 1,
+            'backupCount': -1,  # 最多备份几个
+            'atTime': d.now().time().replace(0, 0, 0),   # 每天0时0分0秒进行翻转
+            'formatter': 'simple',
+            'encoding': 'utf-8',
+        },
+    },
+    'loggers': {
+       # 默认的logger应用如下配置
+        '': {
+            'handlers': ['default', 'console'],  # 上线之后可以把'console'移除
+            'level': 'INFO',
+            'propagate': True,  # 向不向更高级别的logger传递
+        },
+    },
+}
+
+
+# swagger
+# swagger 地址需要过滤，不能按统一格式返回
+SWAGGER_URL = ["/swagger/", "/redoc/", "/swagger.json", "/swagger.yaml"]

@@ -113,7 +113,6 @@ class CustomResponseObtainJSONWebToken(ObtainJSONWebToken):
         if serializer.is_valid():
             user = serializer.object.get('user') or request.user
             token = serializer.object.get('token')
-            print(">>>>>>>>>>>>>:",token)
             response_data = jwt_response_payload_handler(token, user, request)
             response = Response(response_data)
             if api_settings.JWT_AUTH_COOKIE:
@@ -130,8 +129,8 @@ class CustomResponseObtainJSONWebToken(ObtainJSONWebToken):
 
 
 class UserRegisterView(CreateModelMixin, RetrieveModelMixin, UpdateModelMixin,DestroyModelMixin,GenericViewSet):
-    authentication_classes = ()
-    permission_classes = ()
+    # authentication_classes = ()
+    # permission_classes = ()
     """
     自定义用户注册
     """
@@ -145,7 +144,7 @@ class UserRegisterView(CreateModelMixin, RetrieveModelMixin, UpdateModelMixin,De
             return UserSerializer
 
     def update(self, request,*args, **kwargs):
-        self.dispatch()
+        # self.dispatch()
         data = request.data
         instance = self.get_object()
         instance.email = data["email"]
