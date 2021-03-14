@@ -1,2 +1,705 @@
-[INFO][2021-03-01 21:04:54,665][autoreload.py:612]Watching for file changes with StatReloader
-[WARNING][2021-03-01 21:05:37,340][connectionpool.py:751]Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000017E1F0147F0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。')': /api/3/store/
+[INFO][2021-03-14 17:09:12,085][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 17:09:14,827][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 17:09:14,829][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 17:09:14,831][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 17:09:43,787][runserver.py:147]HTTP GET /chat/ 200 [0.19, 127.0.0.1:3539]
+[WARNING][2021-03-14 17:09:44,181][log.py:224]Not Found: /favicon.ico
+[WARNING][2021-03-14 17:09:44,182][runserver.py:155]HTTP GET /favicon.ico 404 [0.19, 127.0.0.1:3539]
+[INFO][2021-03-14 17:09:46,253][runserver.py:147]HTTP GET /chat/asda/ 200 [0.05, 127.0.0.1:3539]
+[INFO][2021-03-14 17:09:46,279][runserver.py:168]WebSocket HANDSHAKING /ws/chat/asda/ [127.0.0.1:3549]
+[ERROR][2021-03-14 17:09:47,148][server.py:289]Exception inside application: Django can only handle ASGI/HTTP connections, not websocket.
+Traceback (most recent call last):
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\staticfiles.py", line 44, in __call__
+    return await self.application(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\sentry_sdk\integrations\django\asgi.py", line 34, in sentry_patched_asgi_handler
+    return await middleware(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\sentry_sdk\integrations\asgi.py", line 106, in _run_asgi3
+    return await self._run_app(scope, lambda: self.app(scope, receive, send))
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\sentry_sdk\integrations\asgi.py", line 143, in _run_app
+    raise exc from None
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\sentry_sdk\integrations\asgi.py", line 140, in _run_app
+    return await callback()
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\django\core\handlers\asgi.py", line 143, in __call__
+    raise ValueError(
+ValueError: Django can only handle ASGI/HTTP connections, not websocket.
+[INFO][2021-03-14 17:09:47,225][runserver.py:166]WebSocket DISCONNECT /ws/chat/asda/ [127.0.0.1:3549]
+[WARNING][2021-03-14 17:10:07,383][connectionpool.py:751]Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C6F6AA5190>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。')': /api/3/store/
+[WARNING][2021-03-14 17:10:28,447][connectionpool.py:751]Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C6F67F93D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。')': /api/3/store/
+[WARNING][2021-03-14 17:10:49,484][connectionpool.py:751]Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C6F6989100>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。')': /api/3/store/
+[WARNING][2021-03-14 17:11:31,567][connectionpool.py:751]Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C6F69F7190>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。')': /api/3/store/
+[WARNING][2021-03-14 17:11:52,621][connectionpool.py:751]Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C6F67BB730>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。')': /api/3/store/
+[WARNING][2021-03-14 17:12:13,652][connectionpool.py:751]Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C6F67BB6D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。')': /api/3/store/
+[INFO][2021-03-14 17:16:56,448][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\adminDemo\asgi.py changed, reloading.
+[INFO][2021-03-14 17:16:58,035][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 17:16:58,615][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 17:16:58,616][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 17:16:58,617][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 17:20:43,969][runserver.py:147]HTTP GET /chat/ 200 [0.04, 127.0.0.1:3991]
+[INFO][2021-03-14 17:20:46,819][runserver.py:147]HTTP GET /chat/aa/ 200 [0.05, 127.0.0.1:3991]
+[INFO][2021-03-14 17:20:46,866][runserver.py:168]WebSocket HANDSHAKING /ws/chat/aa/ [127.0.0.1:3998]
+[INFO][2021-03-14 17:20:46,913][runserver.py:164]WebSocket CONNECT /ws/chat/aa/ [127.0.0.1:3998]
+[WARNING][2021-03-14 17:21:05,857][log.py:224]Not Found: /chat
+[WARNING][2021-03-14 17:21:05,858][runserver.py:155]HTTP GET /chat 404 [0.02, 127.0.0.1:3991]
+[INFO][2021-03-14 17:21:09,568][runserver.py:147]HTTP GET /chat/ 200 [0.01, 127.0.0.1:3991]
+[INFO][2021-03-14 17:21:12,841][runserver.py:147]HTTP GET /chat/aa/ 200 [0.01, 127.0.0.1:3991]
+[INFO][2021-03-14 17:21:12,892][runserver.py:168]WebSocket HANDSHAKING /ws/chat/aa/ [127.0.0.1:4044]
+[INFO][2021-03-14 17:21:12,900][runserver.py:164]WebSocket CONNECT /ws/chat/aa/ [127.0.0.1:4044]
+[INFO][2021-03-14 17:22:27,187][runserver.py:147]HTTP GET /chat/aa/ 200 [0.02, 127.0.0.1:4082]
+[INFO][2021-03-14 17:22:27,200][runserver.py:166]WebSocket DISCONNECT /ws/chat/aa/ [127.0.0.1:3998]
+[INFO][2021-03-14 17:22:27,246][runserver.py:168]WebSocket HANDSHAKING /ws/chat/aa/ [127.0.0.1:4085]
+[INFO][2021-03-14 17:22:27,249][runserver.py:164]WebSocket CONNECT /ws/chat/aa/ [127.0.0.1:4085]
+[INFO][2021-03-14 17:23:36,394][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 17:23:39,209][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 17:23:39,698][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 17:23:39,698][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 17:23:39,699][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 17:23:48,391][runserver.py:147]HTTP GET /chat/ 200 [0.05, 127.0.0.1:4166]
+[INFO][2021-03-14 17:23:51,181][runserver.py:147]HTTP GET /chat/aa/ 200 [0.06, 127.0.0.1:4166]
+[INFO][2021-03-14 17:23:51,258][runserver.py:168]WebSocket HANDSHAKING /ws/chat/aa/ [127.0.0.1:4173]
+[INFO][2021-03-14 17:23:51,265][runserver.py:164]WebSocket CONNECT /ws/chat/aa/ [127.0.0.1:4173]
+[INFO][2021-03-14 17:24:33,082][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 17:24:34,832][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 17:24:35,350][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 17:24:35,351][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 17:24:35,352][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 17:24:35,503][runserver.py:147]HTTP GET /chat/aa/ 200 [0.06, 127.0.0.1:4220]
+[INFO][2021-03-14 17:24:35,528][runserver.py:168]WebSocket HANDSHAKING /ws/chat/aa/ [127.0.0.1:4223]
+[INFO][2021-03-14 17:24:35,536][runserver.py:164]WebSocket CONNECT /ws/chat/aa/ [127.0.0.1:4223]
+[INFO][2021-03-14 17:26:14,232][runserver.py:166]WebSocket DISCONNECT /ws/chat/aa/ [127.0.0.1:4223]
+[WARNING][2021-03-14 17:26:25,194][server.py:270]Application instance <Task pending name='Task-4' coro=<StaticFilesWrapper.__call__() running at D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\staticfiles.py:44> wait_for=<Future pending cb=[_chain_future.<locals>._call_check_cancel() at D:\Python38\lib\asyncio\futures.py:360, <TaskWakeupMethWrapper object at 0x000001292F744D90>()]>> for connection <WebSocketProtocol client=['127.0.0.1', 4223] path=b'/ws/chat/aa/'> took too long to shut down and was killed.
+[ERROR][2021-03-14 17:27:28,525][server.py:289]Exception inside application: cannot schedule new futures after shutdown
+Traceback (most recent call last):
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\staticfiles.py", line 44, in __call__
+    return await self.application(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\routing.py", line 71, in __call__
+    return await application(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\sentry_sdk\integrations\django\asgi.py", line 34, in sentry_patched_asgi_handler
+    return await middleware(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\sentry_sdk\integrations\asgi.py", line 106, in _run_asgi3
+    return await self._run_app(scope, lambda: self.app(scope, receive, send))
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\sentry_sdk\integrations\asgi.py", line 143, in _run_app
+    raise exc from None
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\sentry_sdk\integrations\asgi.py", line 140, in _run_app
+    return await callback()
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\django\core\handlers\asgi.py", line 154, in __call__
+    await sync_to_async(signals.request_started.send, thread_sensitive=True)(sender=self.__class__, scope=scope)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\asgiref\sync.py", line 284, in __call__
+    future = loop.run_in_executor(
+  File "D:\Python38\lib\asyncio\base_events.py", line 783, in run_in_executor
+    executor.submit(func, *args), loop=self)
+  File "D:\Python38\lib\concurrent\futures\thread.py", line 179, in submit
+    raise RuntimeError('cannot schedule new futures after shutdown')
+RuntimeError: cannot schedule new futures after shutdown
+[ERROR][2021-03-14 17:27:28,607][runserver.py:160]HTTP GET /chat/ 500 [0.70, 127.0.0.1:4355]
+[INFO][2021-03-14 17:29:33,738][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 17:29:34,266][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 17:29:34,267][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 17:29:34,268][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 17:42:48,588][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\adminDemo\settings\com_settings.py changed, reloading.
+[INFO][2021-03-14 17:42:50,453][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 17:42:51,097][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 17:42:51,098][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 17:42:51,099][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 17:42:57,666][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\adminDemo\settings\com_settings.py changed, reloading.
+[INFO][2021-03-14 17:43:01,389][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 17:43:02,043][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 17:43:02,044][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 17:43:02,046][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 17:43:03,854][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\adminDemo\settings\com_settings.py changed, reloading.
+[INFO][2021-03-14 17:43:06,187][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 17:43:06,721][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 17:43:06,722][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 17:43:06,723][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 17:43:45,308][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 17:43:47,750][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 17:43:48,327][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 17:43:48,328][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 17:43:48,329][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 17:44:45,053][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 17:44:47,220][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 17:44:47,744][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 17:44:47,745][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 17:44:47,746][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 17:45:10,467][runserver.py:147]HTTP GET /chat/ 200 [0.05, 127.0.0.1:5126]
+[INFO][2021-03-14 17:45:18,391][runserver.py:147]HTTP GET /chat/aa/ 200 [0.01, 127.0.0.1:5126]
+[INFO][2021-03-14 17:45:18,439][runserver.py:168]WebSocket HANDSHAKING /ws/chat/aa/ [127.0.0.1:5140]
+[INFO][2021-03-14 17:45:18,537][runserver.py:164]WebSocket CONNECT /ws/chat/aa/ [127.0.0.1:5140]
+[INFO][2021-03-14 17:45:33,116][runserver.py:147]HTTP GET /chat/ 200 [0.01, 127.0.0.1:5126]
+[INFO][2021-03-14 17:45:36,246][runserver.py:147]HTTP GET /chat/aa/ 200 [0.02, 127.0.0.1:5126]
+[INFO][2021-03-14 17:45:36,308][runserver.py:168]WebSocket HANDSHAKING /ws/chat/aa/ [127.0.0.1:5163]
+[INFO][2021-03-14 17:45:36,325][runserver.py:164]WebSocket CONNECT /ws/chat/aa/ [127.0.0.1:5163]
+[INFO][2021-03-14 17:46:40,670][runserver.py:147]HTTP GET /chat/ 200 [0.01, 127.0.0.1:5226]
+[INFO][2021-03-14 17:46:40,682][runserver.py:166]WebSocket DISCONNECT /ws/chat/aa/ [127.0.0.1:5163]
+[INFO][2021-03-14 17:46:43,899][runserver.py:147]HTTP GET /chat/aa/ 200 [0.02, 127.0.0.1:5226]
+[INFO][2021-03-14 17:46:43,931][runserver.py:168]WebSocket HANDSHAKING /ws/chat/aa/ [127.0.0.1:5236]
+[INFO][2021-03-14 17:46:43,949][runserver.py:164]WebSocket CONNECT /ws/chat/aa/ [127.0.0.1:5236]
+[INFO][2021-03-14 17:47:28,436][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 17:47:30,097][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 17:47:30,591][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 17:47:30,591][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 17:47:30,594][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 17:47:55,824][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 17:47:57,656][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 17:47:58,175][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 17:47:58,175][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 17:47:58,177][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 17:47:59,878][runserver.py:147]HTTP GET /chat/ 200 [0.04, 127.0.0.1:5331]
+[INFO][2021-03-14 17:48:01,649][runserver.py:147]HTTP GET /chat/aaa/ 200 [0.05, 127.0.0.1:5331]
+[INFO][2021-03-14 17:48:01,676][runserver.py:168]WebSocket HANDSHAKING /ws/chat/aaa/ [127.0.0.1:5338]
+[INFO][2021-03-14 17:48:01,759][runserver.py:164]WebSocket CONNECT /ws/chat/aaa/ [127.0.0.1:5338]
+[INFO][2021-03-14 18:58:46,950][runserver.py:166]WebSocket DISCONNECT /ws/chat/aaa/ [127.0.0.1:5338]
+[INFO][2021-03-14 21:09:25,305][runserver.py:147]HTTP GET /chat/ 200 [0.05, 127.0.0.1:12485]
+[INFO][2021-03-14 21:09:27,267][runserver.py:147]HTTP GET /chat/asd/ 200 [0.02, 127.0.0.1:12485]
+[INFO][2021-03-14 21:09:27,302][runserver.py:168]WebSocket HANDSHAKING /ws/chat/asd/ [127.0.0.1:12492]
+[INFO][2021-03-14 21:09:27,333][runserver.py:164]WebSocket CONNECT /ws/chat/asd/ [127.0.0.1:12492]
+[INFO][2021-03-14 21:09:38,174][runserver.py:147]HTTP GET /chat/ 200 [0.02, 127.0.0.1:12485]
+[INFO][2021-03-14 21:09:40,380][runserver.py:147]HTTP GET /chat/asdas/ 200 [0.01, 127.0.0.1:12485]
+[INFO][2021-03-14 21:09:40,420][runserver.py:168]WebSocket HANDSHAKING /ws/chat/asdas/ [127.0.0.1:12510]
+[INFO][2021-03-14 21:09:40,432][runserver.py:164]WebSocket CONNECT /ws/chat/asdas/ [127.0.0.1:12510]
+[INFO][2021-03-14 21:14:40,016][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 21:14:41,635][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 21:14:42,103][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 21:14:42,103][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 21:14:42,105][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 21:14:47,767][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 21:14:49,278][autoreload.py:612]Watching for file changes with StatReloader
+[WARNING][2021-03-14 21:15:10,808][connectionpool.py:751]Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001692A6646A0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。')': /api/3/store/
+[WARNING][2021-03-14 21:15:31,844][connectionpool.py:751]Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001692B895DF0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。')': /api/3/store/
+[WARNING][2021-03-14 21:15:52,868][connectionpool.py:751]Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001692B91E070>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。')': /api/3/store/
+[INFO][2021-03-14 21:15:56,092][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 21:16:41,373][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 21:16:41,781][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 21:16:41,781][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 21:16:41,783][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 21:24:25,012][runserver.py:147]HTTP GET /chat/ 200 [0.03, 127.0.0.1:13460]
+[INFO][2021-03-14 21:24:39,420][runserver.py:147]HTTP GET /chat/asda/ 200 [0.02, 127.0.0.1:13460]
+[INFO][2021-03-14 21:24:39,456][runserver.py:168]WebSocket HANDSHAKING /ws/chat/asda/ [127.0.0.1:13486]
+[INFO][2021-03-14 21:24:39,521][runserver.py:164]WebSocket CONNECT /ws/chat/asda/ [127.0.0.1:13486]
+[INFO][2021-03-14 21:25:36,730][runserver.py:168]WebSocket HANDSHAKING /ws/chat/asda/ [127.0.0.1:13683]
+[INFO][2021-03-14 21:25:36,734][runserver.py:164]WebSocket CONNECT /ws/chat/asda/ [127.0.0.1:13683]
+[ERROR][2021-03-14 21:25:40,717][server.py:289]Exception inside application: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\staticfiles.py", line 44, in __call__
+    return await self.application(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\routing.py", line 71, in __call__
+    return await application(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\sessions.py", line 254, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\auth.py", line 181, in __call__
+    return await super().__call__(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\middleware.py", line 26, in __call__
+    return await self.inner(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\routing.py", line 150, in __call__
+    return await application(
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\consumer.py", line 94, in app
+    return await consumer(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\consumer.py", line 58, in __call__
+    await await_many_dispatch(
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\utils.py", line 51, in await_many_dispatch
+    await dispatch(result)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\consumer.py", line 73, in dispatch
+    await handler(message)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\generic\websocket.py", line 196, in websocket_receive
+    await self.receive(text_data=message["text"])
+  File "D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py", line 30, in receive
+    text_data_json = json.loads(text_data)
+  File "D:\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "D:\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[INFO][2021-03-14 21:25:40,883][runserver.py:166]WebSocket DISCONNECT /ws/chat/asda/ [127.0.0.1:13683]
+[WARNING][2021-03-14 21:26:01,895][connectionpool.py:751]Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A37CE7EDF0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。')': /api/3/store/
+[INFO][2021-03-14 21:26:09,143][runserver.py:168]WebSocket HANDSHAKING /ws/chat/asda/ [127.0.0.1:13714]
+[INFO][2021-03-14 21:26:09,146][runserver.py:164]WebSocket CONNECT /ws/chat/asda/ [127.0.0.1:13714]
+[WARNING][2021-03-14 21:26:22,906][connectionpool.py:751]Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A37CDD1160>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。')': /api/3/store/
+[WARNING][2021-03-14 21:26:43,914][connectionpool.py:751]Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A37CE3E1F0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。')': /api/3/store/
+[ERROR][2021-03-14 21:28:01,143][server.py:289]Exception inside application: 'message'
+Traceback (most recent call last):
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\staticfiles.py", line 44, in __call__
+    return await self.application(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\routing.py", line 71, in __call__
+    return await application(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\sessions.py", line 254, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\auth.py", line 181, in __call__
+    return await super().__call__(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\middleware.py", line 26, in __call__
+    return await self.inner(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\routing.py", line 150, in __call__
+    return await application(
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\consumer.py", line 94, in app
+    return await consumer(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\consumer.py", line 58, in __call__
+    await await_many_dispatch(
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\utils.py", line 51, in await_many_dispatch
+    await dispatch(result)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\consumer.py", line 73, in dispatch
+    await handler(message)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\generic\websocket.py", line 196, in websocket_receive
+    await self.receive(text_data=message["text"])
+  File "D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py", line 31, in receive
+    message = text_data_json['message']
+KeyError: 'message'
+[INFO][2021-03-14 21:28:01,176][runserver.py:166]WebSocket DISCONNECT /ws/chat/asda/ [127.0.0.1:13714]
+[WARNING][2021-03-14 21:28:22,188][connectionpool.py:751]Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A37CE7E520>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。')': /api/3/store/
+[WARNING][2021-03-14 21:28:43,201][connectionpool.py:751]Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A37CE3E190>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。')': /api/3/store/
+[WARNING][2021-03-14 21:29:04,215][connectionpool.py:751]Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A37CE3EFA0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。')': /api/3/store/
+[INFO][2021-03-14 21:29:29,620][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 21:29:31,197][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 21:29:31,702][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 21:29:31,703][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 21:29:31,704][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 21:29:36,794][runserver.py:168]WebSocket HANDSHAKING /ws/chat/asda/ [127.0.0.1:13928]
+[INFO][2021-03-14 21:29:36,842][runserver.py:164]WebSocket CONNECT /ws/chat/asda/ [127.0.0.1:13928]
+[INFO][2021-03-14 21:30:40,434][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 21:30:41,866][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 21:30:42,317][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 21:30:42,318][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 21:30:42,319][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 21:30:44,850][runserver.py:168]WebSocket HANDSHAKING /ws/chat/asda/ [127.0.0.1:14001]
+[INFO][2021-03-14 21:30:44,902][runserver.py:164]WebSocket CONNECT /ws/chat/asda/ [127.0.0.1:14001]
+[INFO][2021-03-14 21:31:09,532][runserver.py:147]HTTP GET /chat/ 200 [0.04, 127.0.0.1:14027]
+[INFO][2021-03-14 21:31:11,430][runserver.py:147]HTTP GET /chat/asda/ 200 [0.02, 127.0.0.1:14027]
+[INFO][2021-03-14 21:31:11,461][runserver.py:168]WebSocket HANDSHAKING /ws/chat/asda/ [127.0.0.1:14034]
+[INFO][2021-03-14 21:31:11,468][runserver.py:164]WebSocket CONNECT /ws/chat/asda/ [127.0.0.1:14034]
+[INFO][2021-03-14 21:39:40,755][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 21:39:42,456][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 21:39:43,143][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 21:39:43,144][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 21:39:43,146][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 21:39:57,946][runserver.py:168]WebSocket HANDSHAKING /ws/chat/asda/ [127.0.0.1:14604]
+[INFO][2021-03-14 21:39:57,988][runserver.py:164]WebSocket CONNECT /ws/chat/asda/ [127.0.0.1:14604]
+[INFO][2021-03-14 21:39:59,777][runserver.py:166]WebSocket DISCONNECT /ws/chat/asda/ [127.0.0.1:14604]
+[INFO][2021-03-14 21:45:03,863][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 21:45:05,291][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 21:45:05,705][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 21:45:05,707][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 21:45:05,708][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 21:45:13,892][runserver.py:168]WebSocket HANDSHAKING /ws/chat/asda/ [127.0.0.1:14885]
+[INFO][2021-03-14 21:45:13,934][runserver.py:164]WebSocket CONNECT /ws/chat/asda/ [127.0.0.1:14885]
+[ERROR][2021-03-14 21:45:38,784][server.py:289]Exception inside application: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Traceback (most recent call last):
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\staticfiles.py", line 44, in __call__
+    return await self.application(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\routing.py", line 71, in __call__
+    return await application(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\sessions.py", line 254, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\auth.py", line 181, in __call__
+    return await super().__call__(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\middleware.py", line 26, in __call__
+    return await self.inner(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\routing.py", line 150, in __call__
+    return await application(
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\consumer.py", line 94, in app
+    return await consumer(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\consumer.py", line 58, in __call__
+    await await_many_dispatch(
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\utils.py", line 51, in await_many_dispatch
+    await dispatch(result)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\consumer.py", line 73, in dispatch
+    await handler(message)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\generic\websocket.py", line 196, in websocket_receive
+    await self.receive(text_data=message["text"])
+  File "D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py", line 28, in receive
+    text_data_json = json.loads(text_data)
+  File "D:\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "D:\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Python38\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+[INFO][2021-03-14 21:45:38,807][runserver.py:166]WebSocket DISCONNECT /ws/chat/asda/ [127.0.0.1:14885]
+[WARNING][2021-03-14 21:45:59,817][connectionpool.py:751]Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000017195802730>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。')': /api/3/store/
+[INFO][2021-03-14 21:46:10,570][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 21:46:14,185][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 21:46:14,614][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 21:46:14,615][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 21:46:14,616][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 21:46:22,040][runserver.py:147]HTTP GET /chat/ 200 [0.04, 127.0.0.1:14959]
+[INFO][2021-03-14 21:46:24,653][runserver.py:147]HTTP GET /chat/asda/ 200 [0.02, 127.0.0.1:14959]
+[INFO][2021-03-14 21:46:24,673][runserver.py:168]WebSocket HANDSHAKING /ws/chat/asda/ [127.0.0.1:14966]
+[INFO][2021-03-14 21:46:24,730][runserver.py:164]WebSocket CONNECT /ws/chat/asda/ [127.0.0.1:14966]
+[INFO][2021-03-14 21:46:32,273][runserver.py:147]HTTP GET /chat/ 200 [0.01, 127.0.0.1:14959]
+[INFO][2021-03-14 21:46:32,286][runserver.py:166]WebSocket DISCONNECT /ws/chat/asda/ [127.0.0.1:14966]
+[INFO][2021-03-14 21:46:34,134][runserver.py:147]HTTP GET /chat/asd/ 200 [0.02, 127.0.0.1:14959]
+[INFO][2021-03-14 21:46:34,161][runserver.py:168]WebSocket HANDSHAKING /ws/chat/asd/ [127.0.0.1:14992]
+[INFO][2021-03-14 21:46:34,170][runserver.py:164]WebSocket CONNECT /ws/chat/asd/ [127.0.0.1:14992]
+[INFO][2021-03-14 21:47:12,032][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 21:47:13,596][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 21:47:14,101][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 21:47:14,102][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 21:47:14,104][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 21:47:15,590][runserver.py:147]HTTP GET /chat/ 200 [0.03, 127.0.0.1:1062]
+[INFO][2021-03-14 21:47:17,589][runserver.py:147]HTTP GET /chat/asdas/ 200 [0.02, 127.0.0.1:1062]
+[INFO][2021-03-14 21:47:17,619][runserver.py:168]WebSocket HANDSHAKING /ws/chat/asdas/ [127.0.0.1:1068]
+[INFO][2021-03-14 21:47:17,687][runserver.py:164]WebSocket CONNECT /ws/chat/asdas/ [127.0.0.1:1068]
+[ERROR][2021-03-14 21:47:20,123][server.py:289]Exception inside application: No handler for message type chat_message1
+Traceback (most recent call last):
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\staticfiles.py", line 44, in __call__
+    return await self.application(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\routing.py", line 71, in __call__
+    return await application(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\sessions.py", line 254, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\auth.py", line 181, in __call__
+    return await super().__call__(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\middleware.py", line 26, in __call__
+    return await self.inner(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\routing.py", line 150, in __call__
+    return await application(
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\consumer.py", line 94, in app
+    return await consumer(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\consumer.py", line 58, in __call__
+    await await_many_dispatch(
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\utils.py", line 51, in await_many_dispatch
+    await dispatch(result)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\consumer.py", line 75, in dispatch
+    raise ValueError("No handler for message type %s" % message["type"])
+ValueError: No handler for message type chat_message1
+[INFO][2021-03-14 21:47:20,141][runserver.py:166]WebSocket DISCONNECT /ws/chat/asdas/ [127.0.0.1:1068]
+[WARNING][2021-03-14 21:47:41,154][connectionpool.py:751]Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000024674DC9CD0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。')': /api/3/store/
+[WARNING][2021-03-14 21:48:02,164][connectionpool.py:751]Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000024674D616D0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。')': /api/3/store/
+[INFO][2021-03-14 21:48:17,984][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 21:48:21,614][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 21:48:22,011][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 21:48:22,012][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 21:48:22,013][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 21:51:38,569][runserver.py:147]HTTP GET /chat/ 200 [0.03, 127.0.0.1:1430]
+[INFO][2021-03-14 21:51:41,548][runserver.py:147]HTTP GET /chat/aaa/ 200 [0.02, 127.0.0.1:1430]
+[INFO][2021-03-14 21:51:41,580][runserver.py:168]WebSocket HANDSHAKING /ws/chat/aaa/ [127.0.0.1:1439]
+[INFO][2021-03-14 21:51:41,636][runserver.py:164]WebSocket CONNECT /ws/chat/aaa/ [127.0.0.1:1439]
+[INFO][2021-03-14 21:53:41,472][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 21:53:42,971][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 21:53:43,421][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 21:53:43,421][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 21:53:43,423][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 21:54:09,901][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 21:54:11,394][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 21:54:11,807][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 21:54:11,807][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 21:54:11,808][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 21:54:23,848][runserver.py:147]HTTP GET /chat/ 200 [0.05, 127.0.0.1:1639]
+[INFO][2021-03-14 21:54:28,216][runserver.py:147]HTTP GET /chat/aaa/ 200 [0.01, 127.0.0.1:1639]
+[INFO][2021-03-14 21:54:28,247][runserver.py:168]WebSocket HANDSHAKING /ws/chat/aaa/ [127.0.0.1:1646]
+[INFO][2021-03-14 21:54:28,308][runserver.py:164]WebSocket CONNECT /ws/chat/aaa/ [127.0.0.1:1646]
+[INFO][2021-03-14 21:54:59,166][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 21:54:59,636][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 21:54:59,637][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 21:54:59,638][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 21:55:27,660][runserver.py:147]HTTP GET /chat/ 200 [0.03, 127.0.0.1:1721]
+[INFO][2021-03-14 21:55:32,184][runserver.py:147]HTTP GET /chat/aaa/ 200 [0.02, 127.0.0.1:1721]
+[INFO][2021-03-14 21:55:32,218][runserver.py:168]WebSocket HANDSHAKING /ws/chat/aaa/ [127.0.0.1:1730]
+[INFO][2021-03-14 21:55:32,279][runserver.py:164]WebSocket CONNECT /ws/chat/aaa/ [127.0.0.1:1730]
+[WARNING][2021-03-14 21:56:11,803][log.py:224]Not Found: /chat/chat_aaa
+[WARNING][2021-03-14 21:56:11,808][runserver.py:155]HTTP GET /chat/chat_aaa 404 [2.27, 127.0.0.1:1721]
+[INFO][2021-03-14 21:56:11,831][runserver.py:166]WebSocket DISCONNECT /ws/chat/aaa/ [127.0.0.1:1730]
+[INFO][2021-03-14 21:56:19,997][runserver.py:147]HTTP GET /chat/ 200 [0.01, 127.0.0.1:1721]
+[INFO][2021-03-14 21:56:38,542][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 21:56:39,953][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 21:56:40,553][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 21:56:40,554][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 21:56:40,558][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 21:56:42,594][runserver.py:147]HTTP GET /chat/ 200 [0.03, 127.0.0.1:1819]
+[INFO][2021-03-14 21:56:44,433][runserver.py:147]HTTP GET /chat/aaa/ 200 [0.02, 127.0.0.1:1819]
+[INFO][2021-03-14 21:56:44,463][runserver.py:168]WebSocket HANDSHAKING /ws/chat/aaa/ [127.0.0.1:1826]
+[INFO][2021-03-14 21:56:44,522][runserver.py:164]WebSocket CONNECT /ws/chat/aaa/ [127.0.0.1:1826]
+[INFO][2021-03-14 21:57:15,096][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 21:57:16,740][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 21:57:17,202][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 21:57:17,202][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 21:57:17,203][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 21:57:17,969][runserver.py:147]HTTP GET /chat/ 200 [0.03, 127.0.0.1:1868]
+[INFO][2021-03-14 21:57:20,817][runserver.py:147]HTTP GET /chat/aaa/ 200 [0.02, 127.0.0.1:1868]
+[INFO][2021-03-14 21:57:20,845][runserver.py:168]WebSocket HANDSHAKING /ws/chat/aaa/ [127.0.0.1:1875]
+[INFO][2021-03-14 21:57:20,897][runserver.py:164]WebSocket CONNECT /ws/chat/aaa/ [127.0.0.1:1875]
+[INFO][2021-03-14 21:57:50,090][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 21:57:50,616][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 21:57:50,617][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 21:57:50,618][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 21:57:56,008][runserver.py:147]HTTP GET /chat/ 200 [0.04, 127.0.0.1:1926]
+[INFO][2021-03-14 21:57:59,553][runserver.py:147]HTTP GET /chat/aaa/ 200 [0.01, 127.0.0.1:1926]
+[INFO][2021-03-14 21:57:59,583][runserver.py:168]WebSocket HANDSHAKING /ws/chat/aaa/ [127.0.0.1:1935]
+[INFO][2021-03-14 21:57:59,651][runserver.py:164]WebSocket CONNECT /ws/chat/aaa/ [127.0.0.1:1935]
+[INFO][2021-03-14 21:58:30,718][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 21:58:32,377][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 21:58:32,861][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 21:58:32,863][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 21:58:32,865][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 21:58:38,256][runserver.py:147]HTTP GET /chat/ 200 [0.03, 127.0.0.1:1984]
+[INFO][2021-03-14 21:58:40,630][runserver.py:147]HTTP GET /chat/aaa/ 200 [0.02, 127.0.0.1:1984]
+[INFO][2021-03-14 21:58:40,660][runserver.py:168]WebSocket HANDSHAKING /ws/chat/aaa/ [127.0.0.1:1991]
+[INFO][2021-03-14 21:58:40,722][runserver.py:164]WebSocket CONNECT /ws/chat/aaa/ [127.0.0.1:1991]
+[INFO][2021-03-14 21:58:54,067][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 21:58:55,797][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 21:58:56,216][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 21:58:56,216][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 21:58:56,217][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 21:58:57,551][runserver.py:147]HTTP GET /chat/ 200 [0.05, 127.0.0.1:2018]
+[INFO][2021-03-14 21:59:00,589][runserver.py:147]HTTP GET /chat/aaa/ 200 [0.05, 127.0.0.1:2018]
+[INFO][2021-03-14 21:59:00,613][runserver.py:168]WebSocket HANDSHAKING /ws/chat/aaa/ [127.0.0.1:2026]
+[INFO][2021-03-14 21:59:00,678][runserver.py:164]WebSocket CONNECT /ws/chat/aaa/ [127.0.0.1:2026]
+[INFO][2021-03-14 21:59:44,991][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 21:59:46,548][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 21:59:47,001][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 21:59:47,002][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 21:59:47,003][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 21:59:50,285][runserver.py:147]HTTP GET /chat/ 200 [0.04, 127.0.0.1:2082]
+[INFO][2021-03-14 21:59:52,498][runserver.py:147]HTTP GET /chat/aaaa/ 200 [0.02, 127.0.0.1:2082]
+[INFO][2021-03-14 21:59:52,526][runserver.py:168]WebSocket HANDSHAKING /ws/chat/aaaa/ [127.0.0.1:2089]
+[INFO][2021-03-14 21:59:52,580][runserver.py:164]WebSocket CONNECT /ws/chat/aaaa/ [127.0.0.1:2089]
+[INFO][2021-03-14 21:59:58,262][runserver.py:147]HTTP GET /chat/ 200 [0.02, 127.0.0.1:2082]
+[INFO][2021-03-14 21:59:58,272][runserver.py:166]WebSocket DISCONNECT /ws/chat/aaaa/ [127.0.0.1:2089]
+[INFO][2021-03-14 22:00:07,680][runserver.py:147]HTTP GET /chat/ 200 [0.02, 127.0.0.1:2082]
+[INFO][2021-03-14 22:00:09,456][runserver.py:147]HTTP GET /chat/aaa/ 200 [0.02, 127.0.0.1:2082]
+[INFO][2021-03-14 22:00:09,482][runserver.py:168]WebSocket HANDSHAKING /ws/chat/aaa/ [127.0.0.1:2137]
+[INFO][2021-03-14 22:00:09,498][runserver.py:164]WebSocket CONNECT /ws/chat/aaa/ [127.0.0.1:2137]
+[INFO][2021-03-14 22:01:12,934][runserver.py:168]WebSocket HANDSHAKING /ws/chat/aaa/ [127.0.0.1:2200]
+[INFO][2021-03-14 22:01:12,944][runserver.py:164]WebSocket CONNECT /ws/chat/aaa/ [127.0.0.1:2200]
+[ERROR][2021-03-14 22:01:31,052][server.py:289]Exception inside application: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Traceback (most recent call last):
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\staticfiles.py", line 44, in __call__
+    return await self.application(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\routing.py", line 71, in __call__
+    return await application(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\sessions.py", line 254, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\auth.py", line 181, in __call__
+    return await super().__call__(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\middleware.py", line 26, in __call__
+    return await self.inner(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\routing.py", line 150, in __call__
+    return await application(
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\consumer.py", line 94, in app
+    return await consumer(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\consumer.py", line 58, in __call__
+    await await_many_dispatch(
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\utils.py", line 51, in await_many_dispatch
+    await dispatch(result)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\consumer.py", line 73, in dispatch
+    await handler(message)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\generic\websocket.py", line 196, in websocket_receive
+    await self.receive(text_data=message["text"])
+  File "D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py", line 29, in receive
+    text_data_json = json.loads(text_data)
+  File "D:\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "D:\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Python38\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+[INFO][2021-03-14 22:01:31,104][runserver.py:166]WebSocket DISCONNECT /ws/chat/aaa/ [127.0.0.1:2200]
+[WARNING][2021-03-14 22:01:52,116][connectionpool.py:751]Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F892A4C6A0>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。')': /api/3/store/
+[INFO][2021-03-14 22:02:04,268][runserver.py:168]WebSocket HANDSHAKING /ws/chat/aaa/ [127.0.0.1:2252]
+[INFO][2021-03-14 22:02:04,272][runserver.py:164]WebSocket CONNECT /ws/chat/aaa/ [127.0.0.1:2252]
+[INFO][2021-03-14 22:02:07,285][runserver.py:166]WebSocket DISCONNECT /ws/chat/aaa/ [127.0.0.1:2252]
+[INFO][2021-03-14 22:02:10,313][runserver.py:168]WebSocket HANDSHAKING /ws/chat/aaa/ [127.0.0.1:2260]
+[INFO][2021-03-14 22:02:10,316][runserver.py:164]WebSocket CONNECT /ws/chat/aaa/ [127.0.0.1:2260]
+[WARNING][2021-03-14 22:02:13,126][connectionpool.py:751]Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F892A4CD00>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。')': /api/3/store/
+[ERROR][2021-03-14 22:02:16,341][server.py:289]Exception inside application: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Traceback (most recent call last):
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\staticfiles.py", line 44, in __call__
+    return await self.application(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\routing.py", line 71, in __call__
+    return await application(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\sessions.py", line 254, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\auth.py", line 181, in __call__
+    return await super().__call__(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\middleware.py", line 26, in __call__
+    return await self.inner(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\routing.py", line 150, in __call__
+    return await application(
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\consumer.py", line 94, in app
+    return await consumer(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\consumer.py", line 58, in __call__
+    await await_many_dispatch(
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\utils.py", line 51, in await_many_dispatch
+    await dispatch(result)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\consumer.py", line 73, in dispatch
+    await handler(message)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\generic\websocket.py", line 196, in websocket_receive
+    await self.receive(text_data=message["text"])
+  File "D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py", line 29, in receive
+    text_data_json = json.loads(text_data)
+  File "D:\Python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "D:\Python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "D:\Python38\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+[INFO][2021-03-14 22:02:16,386][runserver.py:166]WebSocket DISCONNECT /ws/chat/aaa/ [127.0.0.1:2260]
+[WARNING][2021-03-14 22:02:34,136][connectionpool.py:751]Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F892B28430>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。')': /api/3/store/
+[INFO][2021-03-14 22:02:41,884][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 22:02:45,613][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 22:02:46,134][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 22:02:46,134][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 22:02:46,135][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 22:02:47,838][runserver.py:147]HTTP GET /chat/ 200 [0.04, 127.0.0.1:2315]
+[INFO][2021-03-14 22:02:50,124][runserver.py:147]HTTP GET /chat/dddd/ 200 [0.02, 127.0.0.1:2315]
+[INFO][2021-03-14 22:02:50,153][runserver.py:168]WebSocket HANDSHAKING /ws/chat/dddd/ [127.0.0.1:2323]
+[INFO][2021-03-14 22:02:50,214][runserver.py:164]WebSocket CONNECT /ws/chat/dddd/ [127.0.0.1:2323]
+[INFO][2021-03-14 22:05:06,919][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 22:05:08,499][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 22:05:08,917][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 22:05:08,918][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 22:05:08,919][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 22:10:45,536][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 22:10:46,946][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 22:10:47,350][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 22:10:47,350][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 22:10:47,351][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 22:15:13,644][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 22:15:15,157][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 22:15:15,627][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 22:15:15,628][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 22:15:15,629][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 22:17:57,903][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 22:17:59,614][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 22:18:00,090][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 22:18:00,091][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 22:18:00,092][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 22:22:19,534][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 22:22:21,062][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 22:22:21,487][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 22:22:21,488][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 22:22:21,489][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 22:24:16,092][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 22:24:17,891][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 22:24:18,356][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 22:24:18,357][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 22:24:18,358][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 22:33:45,677][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\user_manage\views.py changed, reloading.
+[INFO][2021-03-14 22:33:57,493][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 22:34:03,398][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 22:34:03,398][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 22:34:03,400][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 22:34:05,499][runserver.py:168]WebSocket HANDSHAKING /ws/chat/aaa/ [127.0.0.1:4420]
+[INFO][2021-03-14 22:34:05,866][runserver.py:164]WebSocket CONNECT /ws/chat/aaa/ [127.0.0.1:4420]
+[INFO][2021-03-14 22:34:16,421][runserver.py:166]WebSocket DISCONNECT /ws/chat/aaa/ [127.0.0.1:4420]
+[INFO][2021-03-14 22:34:49,980][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\user_manage\views.py changed, reloading.
+[INFO][2021-03-14 22:34:51,527][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 22:34:51,976][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 22:34:51,976][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 22:34:51,978][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 22:34:52,409][runserver.py:168]WebSocket HANDSHAKING /ws/chat/aaa/ [127.0.0.1:4473]
+[INFO][2021-03-14 22:34:52,487][runserver.py:164]WebSocket CONNECT /ws/chat/aaa/ [127.0.0.1:4473]
+[INFO][2021-03-14 22:35:00,249][runserver.py:147]HTTP GET /chat/ 200 [0.11, 127.0.0.1:4515]
+[INFO][2021-03-14 22:35:05,298][runserver.py:147]HTTP OPTIONS /login/ 200 [0.00, 127.0.0.1:4534]
+[INFO][2021-03-14 22:35:05,522][runserver.py:147]HTTP POST /login/ 200 [0.22, 127.0.0.1:4534]
+[INFO][2021-03-14 22:35:05,541][runserver.py:147]HTTP OPTIONS /menu/menus 200 [0.00, 127.0.0.1:4534]
+[INFO][2021-03-14 22:35:05,581][runserver.py:147]HTTP GET /menu/menus 200 [0.04, 127.0.0.1:4534]
+[INFO][2021-03-14 22:35:34,982][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 22:35:36,686][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 22:35:37,149][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 22:35:37,151][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 22:35:37,152][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 22:35:41,224][runserver.py:168]WebSocket HANDSHAKING /ws/chat/aaa/ [127.0.0.1:4602]
+[INFO][2021-03-14 22:35:41,272][runserver.py:164]WebSocket CONNECT /ws/chat/aaa/ [127.0.0.1:4602]
+[INFO][2021-03-14 22:35:49,175][runserver.py:147]HTTP POST /login/ 200 [0.19, 127.0.0.1:4612]
+[INFO][2021-03-14 22:35:49,223][runserver.py:147]HTTP GET /menu/menus 200 [0.03, 127.0.0.1:4612]
+[INFO][2021-03-14 22:36:14,937][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\user_manage\views.py changed, reloading.
+[INFO][2021-03-14 22:36:16,397][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 22:36:16,844][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 22:36:16,845][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 22:36:16,846][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 22:36:25,000][runserver.py:168]WebSocket HANDSHAKING /ws/chat/aaa/ [127.0.0.1:4673]
+[INFO][2021-03-14 22:36:25,042][runserver.py:164]WebSocket CONNECT /ws/chat/aaa/ [127.0.0.1:4673]
+[INFO][2021-03-14 22:36:31,194][runserver.py:147]HTTP POST /login/ 200 [0.21, 127.0.0.1:4681]
+[INFO][2021-03-14 22:36:31,256][runserver.py:147]HTTP GET /menu/menus 200 [0.05, 127.0.0.1:4681]
+[ERROR][2021-03-14 22:36:31,869][server.py:289]Exception inside application: No handler for message type system_message
+Traceback (most recent call last):
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\staticfiles.py", line 44, in __call__
+    return await self.application(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\routing.py", line 71, in __call__
+    return await application(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\sessions.py", line 47, in __call__
+    return await self.inner(dict(scope, cookies=cookies), receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\sessions.py", line 254, in __call__
+    return await self.inner(wrapper.scope, receive, wrapper.send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\auth.py", line 181, in __call__
+    return await super().__call__(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\middleware.py", line 26, in __call__
+    return await self.inner(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\routing.py", line 150, in __call__
+    return await application(
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\consumer.py", line 94, in app
+    return await consumer(scope, receive, send)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\consumer.py", line 58, in __call__
+    await await_many_dispatch(
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\utils.py", line 51, in await_many_dispatch
+    await dispatch(result)
+  File "D:\Python\PythonVirtualenv\adminDemo\lib\site-packages\channels\consumer.py", line 75, in dispatch
+    raise ValueError("No handler for message type %s" % message["type"])
+ValueError: No handler for message type system_message
+[INFO][2021-03-14 22:36:31,963][runserver.py:166]WebSocket DISCONNECT /ws/chat/aaa/ [127.0.0.1:4673]
+[WARNING][2021-03-14 22:36:53,004][connectionpool.py:751]Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000123C6D33160>: Failed to establish a new connection: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。')': /api/3/store/
+[INFO][2021-03-14 22:36:54,672][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 22:36:58,212][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 22:36:58,670][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 22:36:58,670][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 22:36:58,671][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 22:37:01,685][runserver.py:168]WebSocket HANDSHAKING /ws/chat/aaa/ [127.0.0.1:4726]
+[INFO][2021-03-14 22:37:01,727][runserver.py:164]WebSocket CONNECT /ws/chat/aaa/ [127.0.0.1:4726]
+[INFO][2021-03-14 22:37:06,152][runserver.py:147]HTTP POST /login/ 200 [0.19, 127.0.0.1:4732]
+[INFO][2021-03-14 22:37:06,193][runserver.py:147]HTTP GET /menu/menus 200 [0.03, 127.0.0.1:4732]
+[INFO][2021-03-14 22:37:23,063][runserver.py:147]HTTP POST /login/ 200 [0.20, 127.0.0.1:4732]
+[INFO][2021-03-14 22:37:23,129][runserver.py:147]HTTP GET /menu/menus 200 [0.04, 127.0.0.1:4732]
+[INFO][2021-03-14 22:38:36,283][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 22:38:38,098][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 22:38:38,554][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 22:38:38,555][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 22:38:38,556][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 22:40:04,650][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 22:40:06,337][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 22:40:06,839][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 22:40:06,840][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 22:40:06,841][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 22:40:23,500][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 22:40:24,956][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 22:40:25,366][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 22:40:25,367][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 22:40:25,368][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 22:41:00,426][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 22:41:01,846][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 22:41:02,250][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 22:41:02,251][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 22:41:02,252][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 22:41:19,785][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 22:41:21,170][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 22:41:21,585][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 22:41:21,585][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 22:41:21,587][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 22:41:29,531][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 22:41:31,120][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 22:41:31,537][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 22:41:31,543][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 22:41:31,545][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 22:41:43,733][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 22:41:45,122][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 22:41:45,625][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 22:41:45,626][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 22:41:45,627][server.py:152]Listening on TCP address 0.0.0.0:8001
+[INFO][2021-03-14 22:42:20,439][autoreload.py:236]D:\Program Files\JetBrains\shop_admin\apps\dashboard\consumers.py changed, reloading.
+[INFO][2021-03-14 22:42:21,969][autoreload.py:612]Watching for file changes with StatReloader
+[INFO][2021-03-14 22:42:22,372][server.py:112]HTTP/2 support not enabled (install the http2 and tls Twisted extras)
+[INFO][2021-03-14 22:42:22,373][server.py:121]Configuring endpoint tcp:port=8001:interface=0.0.0.0
+[INFO][2021-03-14 22:42:22,374][server.py:152]Listening on TCP address 0.0.0.0:8001

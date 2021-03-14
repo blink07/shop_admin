@@ -17,6 +17,7 @@ from rest_framework_jwt.settings import api_settings
 from rest_framework_jwt.views import ObtainJSONWebToken, jwt_response_payload_handler
 
 from common.pagination import StandardResultsSetPagination
+from dashboard.consumers import send_group_msg
 from menu.models import Permission
 from user_manage.serializers import UserSerializer, UserRegSerializer, RoleSerializer
 from utils.error import ERROR_USER_RALATION
@@ -115,6 +116,7 @@ class CustomResponseObtainJSONWebToken(ObtainJSONWebToken):
             token = serializer.object.get('token')
             response_data = jwt_response_payload_handler(token, user, request)
             response = Response(response_data)
+            send_group_msg("aaa", {"message":"登录成功"})
             if api_settings.JWT_AUTH_COOKIE:
                 expiration = (datetime.utcnow() +
                               api_settings.JWT_EXPIRATION_DELTA)
