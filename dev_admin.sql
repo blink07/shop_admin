@@ -1,7 +1,7 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : 127.0.0.1
+ Source Server         : localhsot
  Source Server Type    : MySQL
  Source Server Version : 50722
  Source Host           : localhost:3306
@@ -11,7 +11,7 @@
  Target Server Version : 50722
  File Encoding         : 65001
 
- Date: 22/02/2021 17:10:23
+ Date: 08/05/2021 13:41:15
 */
 
 SET NAMES utf8mb4;
@@ -208,7 +208,7 @@ CREATE TABLE `django_migrations`  (
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `applied` datetime(6) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 21 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 22 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of django_migrations
@@ -233,6 +233,7 @@ INSERT INTO `django_migrations` VALUES (17, 'admin', '0003_logentry_add_action_f
 INSERT INTO `django_migrations` VALUES (18, 'menu', '0001_initial', '2020-07-04 09:26:04.941128');
 INSERT INTO `django_migrations` VALUES (19, 'sessions', '0001_initial', '2020-07-04 09:26:06.453371');
 INSERT INTO `django_migrations` VALUES (20, 'goods', '0001_initial', '2020-07-23 13:44:42.131826');
+INSERT INTO `django_migrations` VALUES (21, 'auth', '0012_alter_user_first_name_max_length', '2021-03-14 09:18:22.925812');
 
 -- ----------------------------
 -- Table structure for django_session
@@ -452,7 +453,7 @@ CREATE TABLE `sys_user`  (
 -- ----------------------------
 -- Records of sys_user
 -- ----------------------------
-INSERT INTO `sys_user` VALUES (3, 'pbkdf2_sha256$216000$YnevszKkQp7H$pUzRfwtOS2Wrli4EBZCOb31Zx3WPjVv8q9fnI5uacVw=', '2020-07-04 17:40:43.000000', 1, 'admin', '', '', '12@13.com', 1, 1, '2020-07-04 17:39:37.000000', '15070070520', '1', NULL, 1, NULL, 1);
+INSERT INTO `sys_user` VALUES (3, 'pbkdf2_sha256$216000$YnevszKkQp7H$pUzRfwtOS2Wrli4EBZCOb31Zx3WPjVv8q9fnI5uacVw=', '2020-07-04 17:40:43.000000', 1, 'admin', '', '', '12@13.com', 1, 1, '2020-07-04 17:39:37.000000', '15070070522', '1', NULL, 1, NULL, 1);
 INSERT INTO `sys_user` VALUES (4, 'pbkdf2_sha256$180000$yYGtkssWQx9W$Ahca9Z8+ACxAH5frU8+w6hhseHGE08x1xftTvU82R8s=', '2020-07-04 17:41:22.000000', 0, 'blink', '', '', '1@12.com', 0, 1, '2020-06-14 09:28:30.928454', '15070070522', 'male', '', 0, NULL, 1);
 INSERT INTO `sys_user` VALUES (5, 'pbkdf2_sha256$180000$W0vWJbZ5tAWV$UHyBO2/1K/E/6CL9vs7muDXd4jo3IFubxy7STMyTaxY=', '2020-07-04 17:41:24.000000', 0, 'blink01', '', '', '', 0, 1, '2020-06-14 09:28:48.212530', '15070070522', 'male', '', 1, NULL, 2);
 INSERT INTO `sys_user` VALUES (6, 'pbkdf2_sha256$180000$nqUZ8SiXE16o$JtcUAQcFFBLd/TNtHZw5Nrw5ONiNb84VvM3t3LpxnPg=', '2020-07-04 17:41:26.000000', 0, 'admin1', '', '', '1@22.com', 0, 1, '2020-06-15 15:04:59.515993', '15070070752', 'male', '', 1, NULL, 1);

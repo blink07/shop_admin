@@ -71,6 +71,7 @@ def send_group_msg(room_name, message):
     :param message:
     :return:
     """
+    # print("room_name, message",room_name, message)
     channel_layer = get_channel_layer()
     async_to_sync(channel_layer.group_send)(
         'shop_{}'.format(room_name),  # 构造Channels组名称
