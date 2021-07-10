@@ -1,0 +1,13 @@
+# supercisor + uwsgi
+FROM python:3.8
+LABEL maintainer blink
+ENV PYTHONUNBUFFERED 1
+RUN mkdir /etc/supervisor && \
+    pip install supervisor && \
+    echo_supervisord_conf > /etc/supervisor/supervisord.conf && \
+    mkdir /var/log/supervisor && \
+    touch /var/log/supervisor/supervisord.log && \
+    touch /var/run/supervisor.sock && \
+    chmod 777 /var/log/supervisor/supervisord.log && \
+    chmod 777 /var/run/supervisor.sock && \
+    chmod +x /etc/supervisor/supervisord.conf

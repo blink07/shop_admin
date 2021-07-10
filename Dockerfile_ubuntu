@@ -1,0 +1,29 @@
+FROM ubuntu:focal
+ENV DEBIAN_FRONTEND teletype
+RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends apt-utils && \
+    apt-get install -y apt-transport-https &&\
+    sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list && \
+    apt-get clean && \
+    apt-get install -y \
+        locales\
+        git \
+        python3 \
+        python3-dev \
+        python3-setuptools \
+        python3-pip &&\
+        localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8 && \
+        pip3 install --upgrade setuptools pip -i https://pypi.tuna.tsinghua.edu.cn/simple && \
+        mkdir /opt/app && \
+        mkdir /etc/supervisor && \
+        echo_supervisord_conf > /etc/supervisor/supervisord.conf && \
+        mkdir -p /opt/app/upload
+ENV TZ=Asia/Shanghai
+RUN set -eux; \
+    ln -snf /usr/share/zoneinfo/$TZ /etc/localtime; \
+    echo $TZ > /etc/timezone
+ENV LANG en_US.utf8
+ENV PYTHONUNBUFFERED 1
+ENV PYTHONIOENCODING UTF-8
+WORKDIR /opt/app
+COPY requirements.txt /opt/app/
+RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt
