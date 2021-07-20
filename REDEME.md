@@ -1,5 +1,15 @@
 ### 该系统为Python3.8+Django3.0实现的商城后台管理系统
 
+### 部署步骤 (main分支部署文件为常规uwsgi部署， asgi_daphne分支为asgi+daphne方式部署)
+1.将BaseDockerfile作为基础Dockerfile打包成基础镜像
+docker build -t shop_admin:v0 .
+
+2.继承上一步骤的继承镜像，对Docker进行build
+docker build -t shop_admin:dev .
+docker run -p 8001:8001 --name shop_admin_app shop_admin:dev
+
+
+
 ### 该系统实现了自定义登录、自定义注册、自定义认证、自定义权限、通用工具类、一般实体类的增删查改操作,同时配置sentry进行系统监控
 
 * 登录
